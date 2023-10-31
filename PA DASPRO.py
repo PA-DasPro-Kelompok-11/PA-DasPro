@@ -11,7 +11,7 @@ jam = time.asctime(time.localtime(time.time()))
 os.system("cls" if os.name == "nt" else "clear")
 
 
-pathJsonPengguna = "PA\datapengguna.json"
+pathJsonPengguna = "datapengguna.json"
 with open(pathJsonPengguna, "r") as jsonPengguna:
     dataPengguna = json.loads(jsonPengguna.read())
 
@@ -19,7 +19,7 @@ def updatePengguna():
     with open(pathJsonPengguna, "w") as sn:
         json.dump(dataPengguna, sn, indent=4)
 
-pathJsonFilm = "PA\datafilm.json"
+pathJsonFilm = "datafilm.json"
 with open(pathJsonFilm, "r") as jsonFilm:
     dataFilm = json.loads(jsonFilm.read())
 
