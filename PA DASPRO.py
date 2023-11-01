@@ -241,7 +241,7 @@ def saldo():
             elif pilihMenu == 2:
                 saldoTambahan = int(input("Masukkan nominal saldo tambahan: "))
                 if len(str(saldoTambahan)) <= 8:
-                    if saldoTambahan >= 0:
+                    if saldoTambahan > 0:
                         saldo += saldoTambahan
                         if len(str(saldo)) <= 8:
                             dataPengguna["Saldo"][index] = saldo
@@ -251,8 +251,8 @@ def saldo():
                         else:
                             print("Total saldo tidak boleh lebih dari 8 digit.")
                             input("Tekan enter untuk melanjutkan.....")
-                    elif saldoTambahan < 0:
-                        print("Saldo tidak boleh kurang dari 0")
+                    elif saldoTambahan <= 0:
+                        print("Saldo tidak boleh kurang dari sama dengan 0")
                         input("Tekan enter untuk melanjutkan.....")
                 else:
                     print("Saldo tidak boleh lebih dari 8 digit.")
