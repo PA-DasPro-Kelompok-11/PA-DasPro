@@ -1,0 +1,56 @@
+{
+    "Dune": {
+        "Jam Tayang": [
+            "12:00",
+            "15:30",
+            "19:00"
+        ],
+        "Harga Tiket": 80000,
+        "Jumlah Tiket": 10
+    },
+    "Assassination Classroom the Movie: 365 Days": {
+        "Jam Tayang": [
+            "13:15",
+            "16:45",
+            "20:30"
+        ],
+        "Harga Tiket": 75000,
+        "Jumlah Tiket": 15
+    },
+    "Stand by Me Doraemon 2": {
+        "Jam Tayang": [
+            "12:30",
+            "16:00",
+            "19:45"
+        ],
+        "Harga Tiket": 85000,
+        "Jumlah Tiket": 15
+    },
+    "Joker": {
+        "Jam Tayang": [
+            "12:00",
+            "15:30",
+            "19:00"
+        ],
+        "Harga Tiket": 80000,
+        "Jumlah Tiket": 15
+    },
+    "Paw Patrol: The Mighty Movie": {
+        "Jam Tayang": [
+            "13:15",
+            "16:45",
+            "20:30"
+        ],
+        "Harga Tiket": 75000,
+        "Jumlah Tiket": 15
+    },
+    "Given": {
+        "Jam Tayang": [
+            "12:30",
+            "16:00",
+            "19:45"
+        ],
+        "Harga Tiket": 85000,
+        "Jumlah Tiket": 15
+    }
+}
