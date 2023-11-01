@@ -343,6 +343,11 @@ def tambahWaktu():
                 print("|    Format waktu tidak valid    |")
                 print("==================================")
                 input("Tekan enter untuk melanjutkan.....")
+            except KeyboardInterrupt:
+                print("========================================================")
+                print("|  Tolong jangan menekan ctrl dan c secara bersamaan!  |")
+                print("========================================================")
+                input("Tekan enter untuk melanjutkan.....")
 
 def tambahFilm():
     global daftarWaktu
