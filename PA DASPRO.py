@@ -109,7 +109,8 @@ def menuUtama():
         print("| [1]. Pesan Tiket                                                   |")
         print("| [2]. Saldo                                                         |")
         print("| [3]. Urutkan Film                                                  |")
-        print("| [4]. Kembali                                                       |")
+        print("| [4]. Cari Film                                                     |")
+        print("| [5]. Kembali                                                       |")
         print("+====================================================================+")
         try:
             pilihMenu = int(input("Pilih menu: "))
@@ -120,6 +121,8 @@ def menuUtama():
             elif pilihMenu == 3:
                 urutFilm()
             elif pilihMenu == 4:
+                cariFilm()
+            elif pilihMenu == 5:
                 break
             else:
                 error(pilihMenu)
@@ -309,6 +312,37 @@ def urutFilm():
                 break
             else:
                 error(pilihMenu)
+        except ValueError:
+            clear()
+            error()
+        except KeyboardInterrupt:
+            print("========================================================")
+            print("|  Tolong jangan menekan ctrl dan c secara bersamaan!  |")
+            print("========================================================")
+            input("Tekan enter untuk melanjutkan.....")
+
+def cariFilm():
+    while True:
+        clear()
+        print("+====================================================================+")
+        print("|                           Menu Cari Film                           |")
+        print("+====================================================================+")
+        try:
+            namaFilm = str(input("Masukkan Nama Film, ketik 'selesai' jika ingin keluar: "))
+            if namaFilm in dataFilm:
+                clear()
+                print("========================================")
+                print(f"    Film '{namaFilm}' Ada di data.    ")
+                print("========================================")
+                input("Tekan enter untuk melanjutkan.....")
+            elif namaFilm.lower() == "selesai":
+                break
+            else:
+                clear()
+                print("=============================================")
+                print(f"    Film '{namaFilm}' Tidak ada di data    ")
+                print("=============================================")
+                input("Tekan enter untuk melanjutkan.....")
         except ValueError:
             clear()
             error()
