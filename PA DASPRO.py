@@ -108,7 +108,8 @@ def menuUtama():
         print("+====================================================================+")
         print("| [1]. Pesan Tiket                                                   |")
         print("| [2]. Saldo                                                         |")
-        print("| [3]. Kembali                                                       |")
+        print("| [3]. Urutkan Film                                                  |")
+        print("| [4]. Kembali                                                       |")
         print("+====================================================================+")
         try:
             pilihMenu = int(input("Pilih menu: "))
@@ -117,6 +118,8 @@ def menuUtama():
             elif pilihMenu == 2:
                 saldo()
             elif pilihMenu == 3:
+                urutFilm()
+            elif pilihMenu == 4:
                 break
             else:
                 error(pilihMenu)
@@ -261,6 +264,51 @@ def saldo():
                 return True
             else:
                 error(pilihMenu)     
+        except ValueError:
+            clear()
+            error()
+        except KeyboardInterrupt:
+            print("========================================================")
+            print("|  Tolong jangan menekan ctrl dan c secara bersamaan!  |")
+            print("========================================================")
+            input("Tekan enter untuk melanjutkan.....")
+
+def urutFilm():
+    while True:
+        clear()
+        print("+====================================================================+")
+        print("|                        Silahkan Pilih Menu                         |")
+        print("+====================================================================+")
+        print("| [1]. Berdasarkan Nama                                              |")
+        print("| [2]. Berdasarkan Harga                                             |")
+        print("| [3]. Kembali                                                       |")
+        print("+====================================================================+")
+        try:
+            pilihMenu = int(input("Pilih menu: "))
+            if pilihMenu == 1:
+                tabelDataFilm = PrettyTable()
+                tabelDataFilm.clear_rows()
+                tabelDataFilm.title = "Data Film"
+                tabelDataFilm.field_names = ["Nomor", "Nama", "Harga"]
+                for nomor, (nama, harga) in enumerate(dataFilm.items(), start=1):
+                    tabelDataFilm.add_row([nomor, nama, f'Rp.{harga["Harga Tiket"]}'])
+                tabelDataFilm.sortby = "Nama"
+                print(tabelDataFilm)
+                input("Tekan enter untuk melanjutkan.....")
+            elif pilihMenu == 2:
+                tabelDataFilm = PrettyTable()
+                tabelDataFilm.clear_rows()
+                tabelDataFilm.title = "Data Film"
+                tabelDataFilm.field_names = ["Nomor", "Nama", "Harga"]
+                for nomor, (nama, harga) in enumerate(dataFilm.items(), start=1):
+                    tabelDataFilm.add_row([nomor, nama, f'Rp.{harga["Harga Tiket"]}'])
+                tabelDataFilm.sortby = "Harga"
+                print(tabelDataFilm)
+                input("Tekan enter untuk melanjutkan.....")
+            elif pilihMenu == 3:
+                break
+            else:
+                error(pilihMenu)
         except ValueError:
             clear()
             error()
