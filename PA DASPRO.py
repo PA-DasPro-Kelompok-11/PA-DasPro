@@ -134,49 +134,55 @@ def pesanTiket():
         clear()
         tabelFilm()            
         pilihFilm = int(input("Pilih Film: "))
-        daftarFilm = list(dataFilm.keys())
-        global filmTerpilih
-        filmTerpilih = daftarFilm[pilihFilm - 1]
-        if filmTerpilih in dataFilm:
-            tabelJadwal()
-            pilihJadwal = int(input("Piih jadwal film: "))
-            global jadwalTerpilih
-            jadwalTerpilih = dataFilm[filmTerpilih]["Jam Tayang"][pilihJadwal - 1]
-            global jumlahTiket
-            jumlahTiket = int(input("Masukkan Jumlah Tiket: "))
-            if jumlahTiket >0:
-                global harga
-                harga = dataFilm[filmTerpilih]["Harga Tiket"]
-                global hargaTotal
-                hargaTotal = harga * jumlahTiket
-                saldo = dataPengguna["Saldo"][index]
-                if hargaTotal <= saldo:
-                    sisaTiket = dataFilm[filmTerpilih]["Jumlah Tiket"] - jumlahTiket
-                    dataFilm[filmTerpilih]["Jumlah Tiket"] = sisaTiket
-                    updateFilm()
-                    clear()
-                    loading_transaksi()
-                    clear()
-                    global sisaSaldo
-                    sisaSaldo = saldo - hargaTotal
-                    dataPengguna["Saldo"][index] = sisaSaldo
-                    updatePengguna()
-                    print("======================================")
-                    print("|         TRANSAKSI BERHASIL!!       |")
-                    print("======================================")
-                    input("Tekan enter untuk memunculkan bukti pemesanan.....")
-                    invoicePembelian()
+        if pilihFilm > 0:
+            daftarFilm = list(dataFilm.keys())
+            global filmTerpilih
+            filmTerpilih = daftarFilm[pilihFilm - 1]
+            if filmTerpilih in dataFilm:
+                tabelJadwal()
+                pilihJadwal = int(input("Piih jadwal film: "))
+                global jadwalTerpilih
+                jadwalTerpilih = dataFilm[filmTerpilih]["Jam Tayang"][pilihJadwal - 1]
+                global jumlahTiket
+                jumlahTiket = int(input("Masukkan Jumlah Tiket: "))
+                if jumlahTiket >0:
+                    global harga
+                    harga = dataFilm[filmTerpilih]["Harga Tiket"]
+                    global hargaTotal
+                    hargaTotal = harga * jumlahTiket
+                    saldo = dataPengguna["Saldo"][index]
+                    if hargaTotal <= saldo:
+                        sisaTiket = dataFilm[filmTerpilih]["Jumlah Tiket"] - jumlahTiket
+                        dataFilm[filmTerpilih]["Jumlah Tiket"] = sisaTiket
+                        updateFilm()
+                        clear()
+                        loading_transaksi()
+                        clear()
+                        global sisaSaldo
+                        sisaSaldo = saldo - hargaTotal
+                        dataPengguna["Saldo"][index] = sisaSaldo
+                        updatePengguna()
+                        print("======================================")
+                        print("|         TRANSAKSI BERHASIL!!       |")
+                        print("======================================")
+                        input("Tekan enter untuk memunculkan bukti pemesanan.....")
+                        invoicePembelian()
+                    else:
+                        print("======================================")
+                        print("|          TRANSAKSI GAGAL!!         |")
+                        print("-------------------------------------|")
+                        print("|        Saldo Tidak Mencukupi!      |")
+                        print("======================================")
+                        input("Tekan enter untuk melanjutkan.....")
                 else:
-                    print("======================================")
-                    print("|          TRANSAKSI GAGAL!!         |")
-                    print("-------------------------------------|")
-                    print("|        Saldo Tidak Mencukupi!      |")
-                    print("======================================")
+                    print("=========================================")
+                    print("|    Tiket tidak boleh minus atau 0!    |")
+                    print("=========================================")
                     input("Tekan enter untuk melanjutkan.....")
             else:
-                print("=========================================")
-                print("|    Tiket tidak boleh minus atau 0!    |")
-                print("=========================================")
+                print("======================================")
+                print("|       FILM TIDAK ADA DI DATA!!     |")
+                print("======================================")
                 input("Tekan enter untuk melanjutkan.....")
         else:
             print("======================================")
