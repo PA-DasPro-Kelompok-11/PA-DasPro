@@ -655,35 +655,43 @@ def daftar():
             namaUser = str(input("Masukkan nama: "))
             if cekinput(namaUser):
                 if len(namaUser) <= 20:
-                    if namaUser in dataPengguna["Nama"]:
-                        print(f"Nama {namaUser} tersebut sudah ada di database!")
-                        input("Tekan enter untuk melanjutkan.....")
-                    else:
-                        pwUser = pwinput.pwinput(prompt='Masukkan password: ')
-                        if cekinput(pwUser):
-                            if len(pwUser) <= 20:
-                                saldoAwal = int(input("Masukkan saldo awal: "))
-                                if len(str(saldoAwal)) <= 8:
-                                    if saldoAwal >= 0 :
-                                        dataPengguna["Nama"].append(namaUser)
-                                        dataPengguna["Password"].append(pwUser)
-                                        dataPengguna["Saldo"].append(saldoAwal)
-                                        updatePengguna()
-                                        print(f"Nama {namaUser} dengan saldo Rp.{saldoAwal} sudah di daftar di data")
+                    if len(namaUser) >= 4:
+                        if namaUser in dataPengguna["Nama"]:
+                            print(f"Nama {namaUser} tersebut sudah ada di database!")
+                            input("Tekan enter untuk melanjutkan.....")
+                        else:
+                            pwUser = pwinput.pwinput(prompt='Masukkan password: ')
+                            if cekinput(pwUser):
+                                if len(pwUser) <= 20:
+                                    if len(pwUser) >= 4:
+                                        saldoAwal = int(input("Masukkan saldo awal: "))
+                                        if len(str(saldoAwal)) <= 8:
+                                            if saldoAwal >= 0 :
+                                                dataPengguna["Nama"].append(namaUser)
+                                                dataPengguna["Password"].append(pwUser)
+                                                dataPengguna["Saldo"].append(saldoAwal)
+                                                updatePengguna()
+                                                print(f"Nama {namaUser} dengan saldo Rp.{saldoAwal} sudah di daftar di data")
+                                                input("Tekan enter untuk melanjutkan.....")
+                                            elif saldoAwal < 0:
+                                                print("Saldo tidak boleh kurang dari 0, silahkan masukkan ulang.")
+                                                input("Tekan enter untuk melanjutkan.....")
+                                            return True
+                                        else:
+                                            print("Saldo tidak boleh lebih dari 8 digit")
+                                            input("Tekan enter untuk melanjutkan.....")
+                                    else:
+                                        print("Minimal karakter untuk password adalah 4!")
                                         input("Tekan enter untuk melanjutkan.....")
-                                    elif saldoAwal < 0:
-                                        print("Saldo tidak boleh kurang dari 0, silahkan masukkan ulang.")
-                                        input("Tekan enter untuk melanjutkan.....")
-                                    return True
                                 else:
-                                    print("Saldo tidak boleh lebih dari 8 digit")
+                                    print("Batas karakter untuk password adalah 20!")
                                     input("Tekan enter untuk melanjutkan.....")
                             else:
-                                print("Batas karakter untuk password adalah 20!")
+                                print("Input hanya menerima huruf dan angka")
                                 input("Tekan enter untuk melanjutkan.....")
-                        else:
-                            print("Input hanya menerima huruf dan angka")
-                            input("Tekan enter untuk melanjutkan.....")
+                    else:
+                        print("Minimal karakter untuk nama adalah 4!")
+                        input("Tekan enter untuk melanjutkan.....")
                 else:
                     print("Batas karakter untuk nama adalah 20!")
                     input("Tekan enter untuk melanjutkan.....")
@@ -700,7 +708,7 @@ def daftar():
             print("|  Tolong jangan menekan ctrl dan c secara bersamaan!  |")
             print("========================================================")
             input("Tekan enter untuk melanjutkan.....")
-            
+
 def menuAwal():
     while True:
         clear()
