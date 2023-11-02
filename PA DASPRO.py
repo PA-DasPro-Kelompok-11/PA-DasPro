@@ -158,8 +158,8 @@ def pesanTiket():
                     hargaTotal = harga * jumlahTiket
                     saldo = dataPengguna["Saldo"][index]
                     if hargaTotal <= saldo:
-                        sisaTiket = dataFilm[filmTerpilih]["Jumlah Tiket"] - jumlahTiket
-                        dataFilm[filmTerpilih]["Jumlah Tiket"] = sisaTiket
+                        sisaTiket = dataFilm[filmTerpilih]["Jumlah Tiket"][pilihJadwal - 1] - jumlahTiket
+                        dataFilm[filmTerpilih]["Jumlah Tiket"][pilihJadwal - 1] = sisaTiket
                         updateFilm()
                         clear()
                         loading_transaksi()
@@ -195,6 +195,7 @@ def pesanTiket():
             print("|       FILM TIDAK ADA DI DATA!!     |")
             print("======================================")
             input("Tekan enter untuk melanjutkan.....")
+
     except ValueError:
         clear()
         error()
