@@ -6,7 +6,11 @@
             "19:00"
         ],
         "Harga Tiket": 80000,
-        "Jumlah Tiket": 10
+        "Jumlah Tiket": [
+            15,
+            15,
+            15
+        ]
     },
     "Assassination Classroom the Movie: 365 Days": {
         "Jam Tayang": [
@@ -15,7 +19,11 @@
             "20:30"
         ],
         "Harga Tiket": 75000,
-        "Jumlah Tiket": 15
+        "Jumlah Tiket": [
+            15,
+            15,
+            15
+        ]
     },
     "Stand by Me Doraemon 2": {
         "Jam Tayang": [
@@ -24,7 +32,11 @@
             "19:45"
         ],
         "Harga Tiket": 85000,
-        "Jumlah Tiket": 15
+        "Jumlah Tiket": [
+            15,
+            15,
+            15
+        ]
     },
     "Joker": {
         "Jam Tayang": [
@@ -33,7 +45,11 @@
             "19:00"
         ],
         "Harga Tiket": 80000,
-        "Jumlah Tiket": 15
+        "Jumlah Tiket": [
+            15,
+            15,
+            15
+        ]
     },
     "Paw Patrol: The Mighty Movie": {
         "Jam Tayang": [
@@ -42,7 +58,11 @@
             "20:30"
         ],
         "Harga Tiket": 75000,
-        "Jumlah Tiket": 15
+        "Jumlah Tiket": [
+            15,
+            15,
+            15
+        ]
     },
     "Given": {
         "Jam Tayang": [
@@ -51,6 +71,10 @@
             "19:45"
         ],
         "Harga Tiket": 85000,
-        "Jumlah Tiket": 15
+        "Jumlah Tiket": [
+            15,
+            15,
+            15
+        ]
     }
 }
