@@ -11,7 +11,7 @@ jam = time.asctime(time.localtime(time.time()))
 os.system("cls" if os.name == "nt" else "clear")
 
 
-pathJsonPengguna = "datapengguna.json"
+pathJsonPengguna = "E:\Wiraww\Python\Pemesanan tiket bioskop\datapengguna.json"
 with open(pathJsonPengguna, "r") as jsonPengguna:
     dataPengguna = json.loads(jsonPengguna.read())
 
@@ -19,7 +19,7 @@ def updatePengguna():
     with open(pathJsonPengguna, "w") as sn:
         json.dump(dataPengguna, sn, indent=4)
 
-pathJsonFilm = "datafilm.json"
+pathJsonFilm = "E:\Wiraww\Python\Pemesanan tiket bioskop\datafilm.json"
 with open(pathJsonFilm, "r") as jsonFilm:
     dataFilm = json.loads(jsonFilm.read())
 
@@ -66,7 +66,25 @@ def login_gagal():
         print("=======================================================================")
         print()
         quit()
-    
+
+def kesempatanAdmin():
+    global failsleft
+    time.sleep(0.5)
+    print("================================================================")
+    print("|   INPUT YANG DIMASUKKAN SALAH, MOHON MASUKKAN DENGAN BENAR   |")
+    print("================================================================")
+    failsleft = failsleft - 1 
+    print("Kamu  memiliki " + str(failsleft) + " kesempatan ⚠️")
+    print("--"*20)
+    input("Tekan enter untuk melanjutkan.....")
+    if failsleft == 0:
+        clear()
+        print("=======================================================================")
+        print("|                 UPS!, ANDA SALAH SEBANYAK TIGA KALI                 |")
+        print("|              Anda akan diarahkan kembali ke menu sebelumnya         |")
+        print("=======================================================================")
+        print()
+        menuAdmin()
 
 def loading_transaksi():
     clear()
@@ -223,7 +241,7 @@ def invoicePembelian():
     print("Status: Lunas")
     print(f"Sisa saldo: Rp.{sisaSaldo}")
     print("===========================================")
-    time.sleep(4)  
+    time.sleep(10)  
     clear()  
 
 def saldo():
@@ -352,7 +370,7 @@ def cariFilm():
             print("|  Tolong jangan menekan ctrl dan c secara bersamaan!  |")
             print("========================================================")
             input("Tekan enter untuk melanjutkan.....")
-
+    
 def menuAdmin():
     while True:
         clear()
@@ -424,14 +442,14 @@ def tambahWaktu():
                     print("===============================================================")
                     print("|  Jam dan waktu tidak valid. Tolong masukkan waktu yang benar.")
                     print("===============================================================")
-                    input("Tekan enter untuk melanjutkan.....")
+                    kesempatanAdmin()
 
             except ValueError:
                 clear()
                 print("==================================")
                 print("|    Format waktu tidak valid    |")
                 print("==================================")
-                input("Tekan enter untuk melanjutkan.....")
+                kesempatanAdmin()
             except KeyboardInterrupt:
                 print("========================================================")
                 print("|  Tolong jangan menekan ctrl dan c secara bersamaan!  |")
@@ -471,15 +489,15 @@ def tambahFilm():
                             return True 
                         else: 
                             print("Jumlah tiket tidak boleh lebih dari 100")
-                            input("Tekan enter untuk melanjutkan.....")
+                            kesempatanAdmin()
                     else:
                         print("Harga tidak boleh lebih dari 7 digit")
-                        input("Tekan enter untuk melanjutkan.....")
+                        kesempatanAdmin()
                 else:
                     print("Nama tidak boleh lebih dari 100 digit.")
-                    input("Tekan enter untuk melanjutkan.....")
+                    kesempatanAdmin()
         except ValueError:
-            error()
+            kesempatanAdmin()
         except KeyboardInterrupt:
             print("========================================================")
             print("|  Tolong jangan menekan ctrl dan c secara bersamaan!  |")
@@ -514,10 +532,10 @@ def lihatFilm():
                 print(f"Tidak ada film dengan nomor {pilihFilm}")
                 input("Tekan enter untuk melanjutkan......")
         except ValueError:
-            error()
+            kesempatanAdmin()
         except IndexError:
             print(f"Tidak ada film dengan nomor {pilihFilm}")
-            input("Tekan enter untuk melanjutkan......")
+            kesempatanAdmin()
         except KeyboardInterrupt:
             print("========================================================")
             print("|  Tolong jangan menekan ctrl dan c secara bersamaan!  |")
@@ -552,12 +570,12 @@ def editFilm():
                         tabelFilm()
                     else:
                         print("Nama tidak boleh lebih dari 100 digit.")
-                        input("Tekan enter untuk melanjutkan.....")
+                        kesempatanAdmin()
                 else:
                     print("======================================")
                     print("|       FILM TIDAK ADA DI DATA!!     |")
                     print("======================================")
-                    input("Tekan enter untuk melanjutkan......")
+                    kesempatanAdmin()
             elif pilihMenu == 2:
                 global daftarWaktu
                 tabelFilm()
@@ -573,7 +591,7 @@ def editFilm():
                     print("======================================")
                     print("|       FILM TIDAK ADA DI DATA!!     |")
                     print("======================================")
-                    input("Tekan enter untuk melanjutkan.....")
+                    kesempatanAdmin()
             elif pilihMenu == 3:
                 tabelFilm()
                 pilihFilm = int(input("Pilih Film: "))
@@ -588,12 +606,12 @@ def editFilm():
                         input("Tekan enter untuk melanjutkan......")
                     else:
                         print("Harga tidak boleh lebih dari 7 digit")
-                        input("Tekan enter untuk melanjutkan.....")
+                        kesempatanAdmin()
                 else:
                     print("======================================")
                     print("|       FILM TIDAK ADA DI DATA!!     |")
                     print("======================================")
-                    input("Tekan enter untuk melanjutkan.....")
+                    kesempatanAdmin()
             elif pilihMenu == 4:
                 tabelFilm()
                 pilihFilm = int(input("Pilih Film: "))
@@ -608,12 +626,12 @@ def editFilm():
                         input("Tekan enter untuk melanjutkan......")
                     else:
                         print("Jumlah tiket tidak boleh lebih dari 100")
-                        input("Tekan enter untuk melanjutkan.....")
+                        kesempatanAdmin()
                 else:
                     print("======================================")
                     print("|       FILM TIDAK ADA DI DATA!!     |")
                     print("======================================")
-                    input("Tekan enter untuk melanjutkan.....")
+                    kesempatanAdmin()
             elif pilihMenu == 5:
                 return True
             else:
@@ -622,7 +640,7 @@ def editFilm():
             error()
         except IndexError:
             print(f"Tidak ada film dengan nomor {pilihFilm}")
-            input("Tekan enter untuk melanjutkan.....")
+            kesempatanAdmin()
         except KeyboardInterrupt:
             print("========================================================")
             print("|  Tolong jangan menekan ctrl dan c secara bersamaan!  |")
@@ -654,14 +672,14 @@ def hapusFilm():
                 print("======================================")
                 print("|       FILM TIDAK ADA DI DATA!!     |")
                 print("======================================")
-                input("Tekan enter untuk melanjutkan.....")
+                kesempatanAdmin()
         except ValueError:
             error()
         except IndexError:
             print("========================================================")
             print(f"|       Tidak ada film dengan nomor {pilihFilm}       |")
             print("========================================================")
-            input("Tekan enter untuk melanjutkan.....")
+            kesempatanAdmin()
         except KeyboardInterrupt:
             print("========================================================")
             print("|  Tolong jangan menekan ctrl dan c secara bersamaan!  |")
@@ -791,7 +809,7 @@ def daftar():
             print("|  Tolong jangan menekan ctrl dan c secara bersamaan!  |")
             print("========================================================")
             input("Tekan enter untuk melanjutkan.....")
-
+            
 def menuAwal():
     while True:
         clear()
