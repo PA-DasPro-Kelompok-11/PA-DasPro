@@ -36,22 +36,6 @@ nama akun : a\
 password : 1\
 Jika benar maka akan di arahkan ke menu admin
 
-### Tidak Ada Nama Akun di Data
-
-![image](https://github.com/PA-DasPro-Kelompok-11/PA-DasPro/assets/143393183/689a7ac2-e126-42ec-82ee-91ed1aa830ce)
-
-Jika nama akun yang di input tidak ada di data maka akan ditanya apakah ingin daftar atau tidak. Jika ya maka akan di arahkan ke menu daftar, jika tidak maka akan di arahkan menu awal.
-
-### Password Salah
-
-![image](https://github.com/PA-DasPro-Kelompok-11/PA-DasPro/assets/143393183/240b2b22-d6f2-4f04-adf5-40a591df6aef)
-
-Jika password salah diberikan kesempatan mengulang hingga 3 kali.
-
-![image](https://github.com/PA-DasPro-Kelompok-11/PA-DasPro/assets/143393183/ac05acb4-a4d5-4c46-82e5-5a940c35fed5)
-
-Jika masih salah hingga melewati kesempatan mengulang maka anda akan dikeluarkan dari program.
-
 ### Daftar Akun
 
 ![image](https://github.com/PA-DasPro-Kelompok-11/PA-DasPro/assets/143393183/5200bfc6-bca9-45ed-9ae6-d0274fe7bedc)
@@ -68,31 +52,7 @@ Lalu setelah itu anda masukkan saldo awal untuk nama akun yang ingin di datarkan
 
 ![image](https://github.com/PA-DasPro-Kelompok-11/PA-DasPro/assets/143393183/772e729d-9eb9-4e26-ae3d-d223f7589074)
 
-Jika berhasil maka akan muncul pesan akun sudah di daftar di data
-
-### Nama Akun Sudah di Data
-
-![image](https://github.com/PA-DasPro-Kelompok-11/PA-DasPro/assets/143393183/2d232600-1195-44e9-81ee-019dc2e482a8)
-
-Jika nama akun yang ingin di daftarkan maka akan muncul pesan nama akun sudah terdaftar. Silahkan anda menggunakan nama lain.
-
-### Minimal Karakter Untuk Nama Akun
-
-![image](https://github.com/PA-DasPro-Kelompok-11/PA-DasPro/assets/143393183/c9af7cff-04f6-4e9f-90b4-7a1c7db0a2f0)
-
-Minimal karakter untuk nama akun adalah 4 karakter dan maksimal 15 karakter.
-
-### Minimal Karakter Untuk Nama Password
-
-![image](https://github.com/PA-DasPro-Kelompok-11/PA-DasPro/assets/143393183/ba4fbd60-a868-4106-833d-3c9ac3bb902c)
-
-Minimal karakter untuk password adalah 4 karakter dan maksimal 15 karakter.
-
-### Saldo Minus
-
-![image](https://github.com/PA-DasPro-Kelompok-11/PA-DasPro/assets/143393183/543a27a7-75ce-42e0-bcfa-8f04d01a1692)
-
-Jika saldo yang diinput kurang dari sama dengan 0 maka muncul pesan saldo tidak boleh kurang sama dengan 0.
+Jika berhasil maka akan muncul pesan akun sudah di daftar di data.
 
 ### Keluar Program
 
@@ -132,25 +92,19 @@ Jika tiket berhasil dibeli maka akan muncul tampilan seperti ini. Tekan enter un
 
 Berikut adalah contoh bukti pemesanan.
 
-### Saldo tidak cukup
-
-![image](https://github.com/PA-DasPro-Kelompok-11/PA-DasPro/assets/143393183/6954306f-e50d-4e89-a2cd-c35b7817facd)
-
-Jika saldo tidak cukup saat memesan tiket maka akan muncul tampilan seperti ini. Silahkan isi saldo terlebih dahulu.
-
 ### Saldo
 
 ![image](https://github.com/PA-DasPro-Kelompok-11/PA-DasPro/assets/143393183/220bc5e2-e579-4a9e-9d6d-b3d57a499cea)
 
 Jika nomor 2 yang di input di menu user, maka akan masuk ke menu saldo. Disini terdapat 3 pilihan yaitu tampilkan saldo, isi saldo dan kembali
 
-### Tampilkan Saldo
+#### Tampilkan Saldo
 
 ![image](https://github.com/PA-DasPro-Kelompok-11/PA-DasPro/assets/143393183/ac85546c-5450-4963-8b5c-64afb6c31fac)
 
 Jika nomor 1 yang di input di menu saldo, maka akan muncul saldo anda sekarang.
 
-### Isi Saldo
+#### Isi Saldo
 
 ![image](https://github.com/PA-DasPro-Kelompok-11/PA-DasPro/assets/143393183/3aecfe7a-e1b5-4841-8a97-b8db3e567387)
 
@@ -160,13 +114,7 @@ Jika nomor 2 yang di input di menu saldo, maka akan muncul input untuk memasukka
 
 Jika berhasil maka akan muncul pesan saldo berhasil ditambahkan.
 
-### Isi Saldo Minus
-
-![image](https://github.com/PA-DasPro-Kelompok-11/PA-DasPro/assets/143393183/64d3c03b-1e72-4f9c-8748-d430fdc04000)
-
-Jika saldo yang di input minus maka akan muncul pesan saldo tidak boleh kurang dari sama dengan 0
-
-### Kembali
+#### Kembali
 
 ![image](https://github.com/PA-DasPro-Kelompok-11/PA-DasPro/assets/143393183/68ddc22d-7f0d-4cfc-a375-b9b23bbf1683)
 
@@ -179,19 +127,19 @@ Jika nomor 3 yang diinput maka akan kembali ke menu user.
 
 Jika nomor 3 yang di input di menu user, maka akan masuk ke menu urutkan film. Disini terdapat 3 pilihan yaitu berdasarkan nama, berdasarkan harga dan kembali
 
-### Berdasarkan Nama
+#### Berdasarkan Nama
 
 ![image](https://github.com/PA-DasPro-Kelompok-11/PA-DasPro/assets/143393183/85ccdc50-9370-481d-9476-1e667c5f1519)
 
 Jika nomor 1 yang di input di menu urutkan film, maka akan muncul tabel data film yang sudah diurutkan berdasarkan nama.
 
-### Berdasarkan Harga
+#### Berdasarkan Harga
 
 ![image](https://github.com/PA-DasPro-Kelompok-11/PA-DasPro/assets/143393183/2465391e-a97e-4bd8-97a9-27ccc7a0e7f5)
 
 Jika nomor 2 yang di input di menu urutkan film, maka akan muncul tabel data film yang sudah diurutkan berdasarkan harga terendah.
 
-### Kembali
+#### Kembali
 
 ![image](https://github.com/PA-DasPro-Kelompok-11/PA-DasPro/assets/143393183/dcc5dc23-cd79-4012-97cd-05242232ede4)
 
@@ -207,15 +155,128 @@ Jika nomor 4 yang di input di menu user, maka akan masuk ke menu cari film. Di s
 
 Jika film ada di data maka akan muncul pesan film ada di data.
 
-![image](https://github.com/PA-DasPro-Kelompok-11/PA-DasPro/assets/143393183/fc9df6c6-2b97-4dc7-a560-9830b0dab805)
-
-Jika film tidak ada di data maka akan muncul pesan film tidak ada di data.
-
 ### Kembali
 
 ![image](https://github.com/PA-DasPro-Kelompok-11/PA-DasPro/assets/143393183/aad3ccad-af56-46a2-82a5-114bc2c95c2c)
 
-Jika angka 5 yang diinput maka akan kembali ke menu awal.
+Jika nomor 5 yang diinput maka akan kembali ke menu awal.
+
+## Menu Admin
+
+![image](https://github.com/PA-DasPro-Kelompok-11/PA-DasPro/assets/143393183/7adffa47-e47f-46ba-b618-3fdc2a872937)
+
+Berikut adalah menu admin jika di menu login memasukkan nama dan password admin.
+
+### Menambahkan Film
+
+![image](https://github.com/PA-DasPro-Kelompok-11/PA-DasPro/assets/143393183/26529d02-f465-4f65-b0f3-6729120f8986)
+
+Jika nomor 1 yang diinput maka akan masuk ke menu menambahkan film. 
+
+![image](https://github.com/PA-DasPro-Kelompok-11/PA-DasPro/assets/143393183/75668e56-bea0-4376-b44b-cb1634383d1c)
+
+Jika nama film sudah diinput maka akan muncul menu untuk memasukkan jadwal pada film. Jika jam sudah selesai diinput maka ketik selesai agar lanjut ke langkah selanjutnya.
+
+![image](https://github.com/PA-DasPro-Kelompok-11/PA-DasPro/assets/143393183/d61fa725-f57b-497b-928c-960af54a2fab)
+
+Selanjutnya masukkan harga tiket.
+
+![image](https://github.com/PA-DasPro-Kelompok-11/PA-DasPro/assets/143393183/085b0175-487a-4200-bf2c-8ca0e39f6324)
+
+Lalu masukkan jumlah tiket.
+
+![image](https://github.com/PA-DasPro-Kelompok-11/PA-DasPro/assets/143393183/9559f0c0-e012-4851-9b41-24d4dc96fe49)
+
+Jika berhasil maka akan muncul pesan seperti gambar di atas
+
+### Lihat Film
+
+![image](https://github.com/PA-DasPro-Kelompok-11/PA-DasPro/assets/143393183/059dff29-ab7f-4c35-9cfa-96d6ea9b4a13)
+
+Jika nomor 2 yang diinput maka akan memunculkan data film. Lalu pilih film untuk melihat jadwal film tersebut.
+
+![image](https://github.com/PA-DasPro-Kelompok-11/PA-DasPro/assets/143393183/500b5320-a59b-49fb-b2a5-a80516bec277)
+
+Jika film sudah dipilih maka akan memunculkan jadwal film tersebut. Jika ingin melihat lagi jadwal film lain masukkan y. Jika ingin kembali ke menu admin masukkan t.
+
+### Edit Film
+
+![image](https://github.com/PA-DasPro-Kelompok-11/PA-DasPro/assets/143393183/de6637b1-71ad-4f9d-8331-371bffa846e5)
+
+Jika nomor 3 yang diinput maka akan memunculkan menu edit data film. Lalu pilih data mana yang ingin di edit.
+
+#### Nama Film
+
+![image](https://github.com/PA-DasPro-Kelompok-11/PA-DasPro/assets/143393183/600d0bc2-3a88-42b1-a6fe-e6c459a2c185)
+
+Jika nomor 1 yang diinput maka akan memunculkan nama film untuk di edit.
+
+![image](https://github.com/PA-DasPro-Kelompok-11/PA-DasPro/assets/143393183/5c3c1ca8-dd8a-424b-a788-12e6d2c78fc4)
+
+Jika sudah dipilih maka akan muncul input nama baru. Jika sudah maka nama akan terganti ke nama baru.
+
+#### Jadwal Film
+
+![image](https://github.com/PA-DasPro-Kelompok-11/PA-DasPro/assets/143393183/511b35b3-d1aa-486d-a28d-99e31e946b7f)
+
+Jika nomor 2 yang diinput maka akan memunculkan nama film yang jadwalnya ingin di edit.
+
+![image](https://github.com/PA-DasPro-Kelompok-11/PA-DasPro/assets/143393183/1bb5be45-4de3-4f38-9704-8b35c474cbb6)
+
+Jika sudah dipilih maka akan masuk ke menu jadwal. Disini anda bisa memasukkan jadwal baru. Ketik selesai jika sudah cukup menambahkan jadwal baru maka jadwal akan terganti ke jadwal baru
+
+#### Harga Tiker
+
+![image](https://github.com/PA-DasPro-Kelompok-11/PA-DasPro/assets/143393183/6e926162-8d7b-4a2e-adf3-19487dd6bc56)
+
+Jika nomor 3 yang diinput maka akan memunculkan nama film yang harganya ingin di edit.
+
+![image](https://github.com/PA-DasPro-Kelompok-11/PA-DasPro/assets/143393183/bc7df86b-c346-409e-aaab-5d6834ee6c5c)
+
+Jika sudah dipilih maka akan muncul inputan untuk memasukkan harga tiket baru.
+
+![image](https://github.com/PA-DasPro-Kelompok-11/PA-DasPro/assets/143393183/b2352b0b-79d3-4236-a30f-7a785245d0e8)
+
+Jika berhasil maka akan muncul pesan seperti gambar di atas.
+
+#### Jumlah Tiket
+
+![image](https://github.com/PA-DasPro-Kelompok-11/PA-DasPro/assets/143393183/2b448ab2-8272-4bd4-9bec-ee448735f29b)
+
+Jika nomor 4 yang diinput maka akan memunculkan nama film yang jumlah tiketnya ingin di edit.
+
+![image](https://github.com/PA-DasPro-Kelompok-11/PA-DasPro/assets/143393183/2aa72544-187e-4675-b682-f636a0647110)
+
+Jika sudah dipilih maka akan muncul inputan untuk memasukkan jumlah tiket yang baru.
+
+![image](https://github.com/PA-DasPro-Kelompok-11/PA-DasPro/assets/143393183/55a1c9a8-c753-4d17-a33b-f3199edb5450)
+
+Jika berhasil maka akan muncul pesan seperti gambar di atas.
+
+#### Kembali
+
+![image](https://github.com/PA-DasPro-Kelompok-11/PA-DasPro/assets/143393183/7f9810e9-4ce3-436c-935e-92fc44d8b436)
+
+Jika nomor 5 yang diinput maka akan kembali ke menu admin.
+
+### Kembali
+
+![image](https://github.com/PA-DasPro-Kelompok-11/PA-DasPro/assets/143393183/5d937cbf-8837-4241-abff-e94927969a36)
+
+Jika nomor 5 yang diinput maka akan kembali ke menu awal.
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
