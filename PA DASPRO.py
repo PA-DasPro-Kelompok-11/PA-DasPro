@@ -27,6 +27,9 @@ def updateFilm():
     with open(pathJsonFilm, "w") as sn:
         json.dump(dataFilm, sn, indent=4)
 
+# ==============================================
+#                    Login Admin
+# ==============================================
 akunAdmin = "a"
 pwAdmin = "1"
 failsleft = 3
