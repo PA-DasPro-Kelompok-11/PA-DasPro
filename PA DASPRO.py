@@ -11,7 +11,7 @@ jam = time.asctime(time.localtime(time.time()))
 os.system("cls" if os.name == "nt" else "clear")
 
 
-pathJsonPengguna = "/Users/adindasalsabillanaura/Documents/PA/datapengguna.json"
+pathJsonPengguna = "E:\Wiraww\Python\Pemesanan tiket bioskop\datapengguna.json"
 with open(pathJsonPengguna, "r") as jsonPengguna:
     dataPengguna = json.loads(jsonPengguna.read())
 
@@ -19,7 +19,7 @@ def updatePengguna():
     with open(pathJsonPengguna, "w") as sn:
         json.dump(dataPengguna, sn, indent=4)
 
-pathJsonFilm = "/Users/adindasalsabillanaura/Documents/PA/datafilm.json"
+pathJsonFilm = "E:\Wiraww\Python\Pemesanan tiket bioskop\datafilm.json"
 with open(pathJsonFilm, "r") as jsonFilm:
     dataFilm = json.loads(jsonFilm.read())
 
@@ -27,9 +27,6 @@ def updateFilm():
     with open(pathJsonFilm, "w") as sn:
         json.dump(dataFilm, sn, indent=4)
 
-# ==============================================
-#                    Login Admin
-# ==============================================
 akunAdmin = "a"
 pwAdmin = "1"
 failsleft = 3
@@ -168,49 +165,43 @@ def pesanTiket():
             if filmTerpilih in dataFilm:
                 tabelJadwal()
                 pilihJadwal = int(input("Piih jadwal film: "))
-                if pilihJadwal > 0:
-                    global jadwalTerpilih
-                    jadwalTerpilih = dataFilm[filmTerpilih]["Jam Tayang"][pilihJadwal - 1]
-                    global jumlahTiket
-                    jumlahTiket = int(input("Masukkan Jumlah Tiket: "))
-                    if jumlahTiket >0:
-                        global harga
-                        harga = dataFilm[filmTerpilih]["Harga Tiket"]
-                        global hargaTotal
-                        hargaTotal = harga * jumlahTiket
-                        saldo = dataPengguna["Saldo"][index]
-                        if hargaTotal <= saldo:
-                            sisaTiket = dataFilm[filmTerpilih]["Jumlah Tiket"][pilihJadwal - 1] - jumlahTiket
-                            dataFilm[filmTerpilih]["Jumlah Tiket"][pilihJadwal - 1] = sisaTiket
-                            updateFilm()
-                            clear()
-                            loading_transaksi()
-                            clear()
-                            global sisaSaldo
-                            sisaSaldo = saldo - hargaTotal
-                            dataPengguna["Saldo"][index] = sisaSaldo
-                            updatePengguna()
-                            print("======================================")
-                            print("|         TRANSAKSI BERHASIL!!       |")
-                            print("======================================")
-                            input("Tekan enter untuk memunculkan bukti pemesanan.....")
-                            invoicePembelian()
-                        else:
-                            print("======================================")
-                            print("|          TRANSAKSI GAGAL!!         |")
-                            print("-------------------------------------|")
-                            print("|        Saldo Tidak Mencukupi!      |")
-                            print("======================================")
-                            input("Tekan enter untuk melanjutkan.....")
+                global jadwalTerpilih
+                jadwalTerpilih = dataFilm[filmTerpilih]["Jam Tayang"][pilihJadwal - 1]
+                global jumlahTiket
+                jumlahTiket = int(input("Masukkan Jumlah Tiket: "))
+                if jumlahTiket >0:
+                    global harga
+                    harga = dataFilm[filmTerpilih]["Harga Tiket"]
+                    global hargaTotal
+                    hargaTotal = harga * jumlahTiket
+                    saldo = dataPengguna["Saldo"][index]
+                    if hargaTotal <= saldo:
+                        sisaTiket = dataFilm[filmTerpilih]["Jumlah Tiket"][pilihJadwal - 1] - jumlahTiket
+                        dataFilm[filmTerpilih]["Jumlah Tiket"][pilihJadwal - 1] = sisaTiket
+                        updateFilm()
+                        clear()
+                        loading_transaksi()
+                        clear()
+                        global sisaSaldo
+                        sisaSaldo = saldo - hargaTotal
+                        dataPengguna["Saldo"][index] = sisaSaldo
+                        updatePengguna()
+                        print("======================================")
+                        print("|         TRANSAKSI BERHASIL!!       |")
+                        print("======================================")
+                        input("Tekan enter untuk memunculkan bukti pemesanan.....")
+                        invoicePembelian()
                     else:
-                        print("=========================================")
-                        print("|    Tiket tidak boleh minus atau 0!    |")
-                        print("=========================================")
+                        print("======================================")
+                        print("|          TRANSAKSI GAGAL!!         |")
+                        print("-------------------------------------|")
+                        print("|        Saldo Tidak Mencukupi!      |")
+                        print("======================================")
                         input("Tekan enter untuk melanjutkan.....")
                 else:
-                    print("======================================")
-                    print("|       FILM TIDAK ADA DI DATA!!     |")
-                    print("======================================")
+                    print("=========================================")
+                    print("|    Tiket tidak boleh minus atau 0!    |")
+                    print("=========================================")
                     input("Tekan enter untuk melanjutkan.....")
             else:
                 print("======================================")
@@ -222,6 +213,7 @@ def pesanTiket():
             print("|       FILM TIDAK ADA DI DATA!!     |")
             print("======================================")
             input("Tekan enter untuk melanjutkan.....")
+
     except ValueError:
         clear()
         error()
@@ -284,7 +276,7 @@ def saldo():
                         else:
                             print("Total saldo tidak boleh lebih dari 8 digit.")
                             input("Tekan enter untuk melanjutkan.....")
-                    elif saldoTambahan <= 0:
+                    else:
                         print("Saldo tidak boleh kurang dari sama dengan 0")
                         input("Tekan enter untuk melanjutkan.....")
                 else:
@@ -451,6 +443,7 @@ def tambahWaktu():
                     print("|  Jam dan waktu tidak valid. Tolong masukkan waktu yang benar.")
                     print("===============================================================")
                     kesempatanAdmin()
+
             except ValueError:
                 clear()
                 print("==================================")
@@ -463,8 +456,42 @@ def tambahWaktu():
                 print("========================================================")
                 input("Tekan enter untuk melanjutkan.....")
 
+def tambahTiket():
+    global daftarWaktu
+    global daftarTiket
+    daftarTiket = []
+    try:
+        for tiket in range(len(daftarWaktu)):
+            while True:
+                jumlahTiket = int(input("Masukkan jumlah tiket: "))
+                if jumlahTiket <= 100:
+                    if jumlahTiket >= 0:
+                        daftarTiket.append(jumlahTiket)
+                        if len(daftarTiket) == len(daftarWaktu):
+                            return True
+                        else:
+                            print("Masukkan lagi jumlah tiket sampai sesuai jumlah jadwal!")
+                    else:
+                        print("Jumlah tiket tidak boleh kurang dari sama dengan 0!")
+                        input("Tekan enter untuk melanjutkan.....")
+                else:
+                    print("Jumlah tiket tidak boleh lebih dari 100")
+                    input("Tekan enter untuk melanjutkan.....")
+            
+    except ValueError:
+        clear()
+        kesempatanAdmin()
+    except KeyboardInterrupt:
+        print("========================================================")
+        print("|  Tolong jangan menekan ctrl dan c secara bersamaan!  |")
+        print("========================================================")
+        input("Tekan enter untuk melanjutkan.....")
+            
+
+
 def tambahFilm():
     global daftarWaktu
+    global daftarTiket
     while True:
         clear()
         print("+====================================================================+")
@@ -482,21 +509,22 @@ def tambahFilm():
                     tambahWaktu()
                     hargaTiket = int(input("Masukkan harga tiket: "))
                     if len(str(hargaTiket)) <= 7:
-                        jumlahTiket = int(input("Masukkan jumlah tiket: "))
-                        if jumlahTiket <= 100:
+                        tambahTiket()
+                        if len(daftarTiket) == len(daftarWaktu):
                             dataFilm.update({namaFilm: {
                                 "Jam Tayang": daftarWaktu,
                                 "Harga Tiket": hargaTiket,
-                                "Jumlah Tiket": jumlahTiket,
+                                "Jumlah Tiket": daftarTiket,
                                 }})
                             del daftarWaktu
+                            del daftarTiket
                             updateFilm()
                             print(f"Data film {namaFilm} berhasil ditambahkan!")
                             input("Tekan enter untuk melanjutkan.....")
                             return True 
-                        else: 
-                            print("Jumlah tiket tidak boleh lebih dari 100")
-                            kesempatanAdmin()
+                        else:
+                            print("Jumlah tiket tidak sesuai dengan jumlah jadwal")
+                            input("Tekan enter untuk melanjutkan.....")
                     else:
                         print("Harga tidak boleh lebih dari 7 digit")
                         kesempatanAdmin()
@@ -550,6 +578,8 @@ def lihatFilm():
             input("Tekan enter untuk melanjutkan.....")
 
 def editFilm():
+    global daftarWaktu
+    global daftarTiket
     while True:
         clear()
         print("+====================================================================+")
@@ -575,6 +605,7 @@ def editFilm():
                         updateFilm()
                         print(f"Film {filmTerpilih} telah diubah menjadi{namaBaru}")
                         tabelFilm()
+                        input("Tekan enter untuk melanjutkan......")
                     else:
                         print("Nama tidak boleh lebih dari 100 digit.")
                         kesempatanAdmin()
@@ -607,10 +638,14 @@ def editFilm():
                 if filmTerpilih in dataFilm:
                     hargaTiketBaru = int(input("Masukkan harga tiket baru: "))
                     if len(str(hargaTiketBaru)) <= 7:
-                        dataFilm[filmTerpilih]["Harga Tiket"] = hargaTiketBaru
-                        updateFilm()
-                        print(f"Harga tiket film {filmTerpilih} telah diubah menjadi Rp.{hargaTiketBaru}")
-                        input("Tekan enter untuk melanjutkan......")
+                        if hargaTiketBaru >= 0:
+                            dataFilm[filmTerpilih]["Harga Tiket"] = hargaTiketBaru
+                            updateFilm()
+                            print(f"Harga tiket film {filmTerpilih} telah diubah menjadi Rp.{hargaTiketBaru}")
+                            input("Tekan enter untuk melanjutkan......")
+                        else:
+                            print("Harga tidak boleh kurang dari sama dengan 0!")
+                            input("Tekan enter untuk melanjutkan......")
                     else:
                         print("Harga tidak boleh lebih dari 7 digit")
                         kesempatanAdmin()
@@ -624,16 +659,18 @@ def editFilm():
                 pilihFilm = int(input("Pilih Film: "))
                 daftarFilm = list(dataFilm.keys())
                 filmTerpilih = daftarFilm[pilihFilm - 1]
+                daftarWaktu = dataFilm[filmTerpilih]["Jam Tayang"]
                 if filmTerpilih in dataFilm:
-                    jumlahTiketBaru = int(input("Masukkan jumlah tiket baru: "))
-                    if jumlahTiketBaru <= 100:
-                        dataFilm[filmTerpilih]["Jumlah Tiket"] = jumlahTiketBaru
+                    print(f'Jadwal film: {dataFilm[filmTerpilih]["Jam Tayang"]}')
+                    tambahTiket()
+                    if len(daftarTiket) == len(daftarWaktu):
+                        dataFilm[filmTerpilih]["Jumlah Tiket"] = daftarTiket
                         updateFilm()
-                        print(f"Jumlah tiket film {filmTerpilih} telah diubah menjadi {jumlahTiketBaru}")
+                        print(f"Jumlah tiket film {filmTerpilih} berhasil diubah")
                         input("Tekan enter untuk melanjutkan......")
                     else:
-                        print("Jumlah tiket tidak boleh lebih dari 100")
-                        kesempatanAdmin()
+                        print("Jumlah tiket tidak sesuai dengan jumlah jadwal")
+                        input("Tekan enter untuk melanjutkan.....")
                 else:
                     print("======================================")
                     print("|       FILM TIDAK ADA DI DATA!!     |")
@@ -774,15 +811,15 @@ def daftar():
                                     if len(pwUser) >= 4:
                                         saldoAwal = int(input("Masukkan saldo awal: "))
                                         if len(str(saldoAwal)) <= 8:
-                                            if saldoAwal >= 0 :
+                                            if saldoAwal > 0 :
                                                 dataPengguna["Nama"].append(namaUser)
                                                 dataPengguna["Password"].append(pwUser)
                                                 dataPengguna["Saldo"].append(saldoAwal)
                                                 updatePengguna()
                                                 print(f"Nama {namaUser} dengan saldo Rp.{saldoAwal} sudah di daftar di data")
                                                 input("Tekan enter untuk melanjutkan.....")
-                                            elif saldoAwal < 0:
-                                                print("Saldo tidak boleh kurang dari 0, silahkan masukkan ulang.")
+                                            else:
+                                                print("Saldo tidak boleh kurang dari sama dengan 0, silahkan masukkan ulang.")
                                                 input("Tekan enter untuk melanjutkan.....")
                                             return True
                                         else:
