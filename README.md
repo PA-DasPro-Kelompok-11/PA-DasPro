@@ -118,18 +118,56 @@ Jika berhasil maka akan muncul pesan saldo berhasil ditambahkan.
 
 Jika saldo yang di input minus maka akan muncul pesan saldo tidak boleh kurang dari sama dengan 0
 
+### Kembali
+
+![image](https://github.com/PA-DasPro-Kelompok-11/PA-DasPro/assets/143393183/68ddc22d-7f0d-4cfc-a375-b9b23bbf1683)
+
+Jika nomor 3 yang diinput maka akan kembali ke menu user.
 
 
+### Urutkan Film 
 
+![image](https://github.com/PA-DasPro-Kelompok-11/PA-DasPro/assets/143393183/d53e7a19-35f9-45f7-a611-49b4ddae11a5)
 
+Jika nomor 3 yang di input di menu user, maka akan masuk ke menu urutkan film. Disini terdapat 3 pilihan yaitu berdasarkan nama, berdasarkan harga dan kembali
 
+### Berdasarkan Nama
 
+![image](https://github.com/PA-DasPro-Kelompok-11/PA-DasPro/assets/143393183/85ccdc50-9370-481d-9476-1e667c5f1519)
 
+Jika nomor 1 yang di input di menu urutkan film, maka akan muncul tabel data film yang sudah diurutkan berdasarkan nama.
 
+### Berdasarkan Harga
 
+![image](https://github.com/PA-DasPro-Kelompok-11/PA-DasPro/assets/143393183/2465391e-a97e-4bd8-97a9-27ccc7a0e7f5)
 
+Jika nomor 2 yang di input di menu urutkan film, maka akan muncul tabel data film yang sudah diurutkan berdasarkan harga terendah.
 
+### Kembali
 
+![image](https://github.com/PA-DasPro-Kelompok-11/PA-DasPro/assets/143393183/dcc5dc23-cd79-4012-97cd-05242232ede4)
+
+Jika nomor 3 yang diinput maka akan kembali ke menu user.
+
+### Cari Film
+
+![image](https://github.com/PA-DasPro-Kelompok-11/PA-DasPro/assets/143393183/fbfe33ec-6a18-4084-b2f3-5f61c960d2df)
+
+Jika nomor 4 yang di input di menu user, maka akan masuk ke menu cari film. Di sini anda bisa memasukkan nama film yang ingin di cari di data. Jika menginput selesai maka anda akan dikembalikan ke menu user.
+
+![image](https://github.com/PA-DasPro-Kelompok-11/PA-DasPro/assets/143393183/e3bcbdf2-a0f1-4a42-8e2c-b7e467fc7a76)
+
+Jika film ada di data maka akan muncul pesan film ada di data.
+
+![image](https://github.com/PA-DasPro-Kelompok-11/PA-DasPro/assets/143393183/fc9df6c6-2b97-4dc7-a560-9830b0dab805)
+
+Jika film tidak ada di data maka akan muncul pesan film tidak ada di data.
+
+### Kembali
+
+![image](https://github.com/PA-DasPro-Kelompok-11/PA-DasPro/assets/143393183/aad3ccad-af56-46a2-82a5-114bc2c95c2c)
+
+Jika angka 5 yang diinput maka akan kembali ke menu awal.
 
 
 
