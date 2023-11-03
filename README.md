@@ -1,8 +1,20 @@
 # Pemesanan Tiket Bioskop
+
 ## Kelompok 11:
 Adinda Salsabilla Naura (2309116023)\
 Muhammad Aryaputra Wirawan (2309116027)\
 Muhammad Pidha Iqbal Fadillah (2309116033)
+
+## Deskripsi Program
+Program ini adalah sebuah program pemesanan tiket bioskop. Terdapat 2 role yaitu admin dan user. Role user dapat melihat film, membeli tiket untuk menonton film, melihat saldo dan menambahkan saldo. Untuk role admin sendiri dapat melakukan C.R.U.D. (Create, Read, Update dan Delete).
+
+## Library
+Terdapat 5 library yang kami gunakan di program ini yaitu:
+1. PrettyTable untuk membuat tabel secara otomatis dan rapi,
+2. os disini kami gunakan untuk membersihkan tampilan di terminal,
+3. pwinput untuk membuat password tidak langsung terlihat,
+4. time disini kami gunakan untuk format penambahan jadwal, mengedit jadwal dan memunculkan tanggal pemesanan di bukti pembelian tiket,
+5. json untuk mengakses dan mengupdate json.
 
 # Penggunaan Program
 
