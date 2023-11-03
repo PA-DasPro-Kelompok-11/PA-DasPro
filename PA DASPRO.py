@@ -11,7 +11,7 @@ jam = time.asctime(time.localtime(time.time()))
 os.system("cls" if os.name == "nt" else "clear")
 
 
-pathJsonPengguna = "E:\Wiraww\Python\Pemesanan tiket bioskop\datapengguna.json"
+pathJsonPengguna = "/Users/adindasalsabillanaura/Documents/PA/datapengguna.json"
 with open(pathJsonPengguna, "r") as jsonPengguna:
     dataPengguna = json.loads(jsonPengguna.read())
 
@@ -19,7 +19,7 @@ def updatePengguna():
     with open(pathJsonPengguna, "w") as sn:
         json.dump(dataPengguna, sn, indent=4)
 
-pathJsonFilm = "E:\Wiraww\Python\Pemesanan tiket bioskop\datafilm.json"
+pathJsonFilm = "/Users/adindasalsabillanaura/Documents/PA/datafilm.json"
 with open(pathJsonFilm, "r") as jsonFilm:
     dataFilm = json.loads(jsonFilm.read())
 
@@ -213,7 +213,6 @@ def pesanTiket():
             print("|       FILM TIDAK ADA DI DATA!!     |")
             print("======================================")
             input("Tekan enter untuk melanjutkan.....")
-
     except ValueError:
         clear()
         error()
@@ -264,7 +263,7 @@ def saldo():
                 print("======================================")
                 input("Tekan enter untuk melajutkan.....")
             elif pilihMenu == 2:
-                saldoTambahan = int(input("Masukkan nominal saldo tambahan: "))
+                saldoTambahan = float(input("Masukkan nominal saldo tambahan: "))
                 if len(str(saldoTambahan)) <= 8:
                     if saldoTambahan > 0:
                         saldo += saldoTambahan
@@ -370,7 +369,7 @@ def cariFilm():
             print("|  Tolong jangan menekan ctrl dan c secara bersamaan!  |")
             print("========================================================")
             input("Tekan enter untuk melanjutkan.....")
-    
+
 def menuAdmin():
     while True:
         clear()
@@ -443,7 +442,6 @@ def tambahWaktu():
                     print("|  Jam dan waktu tidak valid. Tolong masukkan waktu yang benar.")
                     print("===============================================================")
                     kesempatanAdmin()
-
             except ValueError:
                 clear()
                 print("==================================")
@@ -477,7 +475,6 @@ def tambahTiket():
                 else:
                     print("Jumlah tiket tidak boleh lebih dari 100")
                     input("Tekan enter untuk melanjutkan.....")
-            
     except ValueError:
         clear()
         kesempatanAdmin()
@@ -809,7 +806,7 @@ def daftar():
                             if cekinput(pwUser):
                                 if len(pwUser) <= 20:
                                     if len(pwUser) >= 4:
-                                        saldoAwal = int(input("Masukkan saldo awal: "))
+                                        saldoAwal = float(input("Masukkan saldo awal: "))
                                         if len(str(saldoAwal)) <= 8:
                                             if saldoAwal > 0 :
                                                 dataPengguna["Nama"].append(namaUser)
@@ -842,7 +839,9 @@ def daftar():
                     input("Tekan enter untuk melanjutkan.....")
             else:
                 print("Input hanya menerima huruf dan angka")
-                input("Tekan enter untuk melanjutkan.....")
+                keluar= input("Tekan enter untuk melanjutkan dan [Y/y] untuk kembali tampilan awal...")
+                if keluar == "y" or keluar == "Y":
+                        menuAwal()
         except ValueError:
             print("======================================")
             print("|           SALDO WAJIB ANGKA!!      |")
