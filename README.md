@@ -52,6 +52,54 @@ Jika password salah diberikan kesempatan mengulang hingga 3 kali.
 
 Jika masih salah hingga melewati kesempatan mengulang maka anda akan dikeluarkan dari program.
 
+### Daftar Akun
+
+![image](https://github.com/PA-DasPro-Kelompok-11/PA-DasPro/assets/143393183/5200bfc6-bca9-45ed-9ae6-d0274fe7bedc)
+
+Jika nomor 2 yang di input di menu awal, maka akan memunculkan menu daftar akun. Pertama masukkan nama akun yang ingin di daftarkan.
+
+![image](https://github.com/PA-DasPro-Kelompok-11/PA-DasPro/assets/143393183/d21f80bd-b0ec-4176-93e8-6789f0e9c510)
+
+Lalu masukkan password.
+
+![image](https://github.com/PA-DasPro-Kelompok-11/PA-DasPro/assets/143393183/49b9a416-5ab0-48ec-8196-c6bfc171a9c4)
+
+Lalu setelah itu anda masukkan saldo awal untuk nama akun yang ingin di datarkan.
+
+![image](https://github.com/PA-DasPro-Kelompok-11/PA-DasPro/assets/143393183/772e729d-9eb9-4e26-ae3d-d223f7589074)
+
+Jika berhasil maka akan muncul pesan akun sudah di daftar di data
+
+### Nama Akun Sudah di Data
+
+![image](https://github.com/PA-DasPro-Kelompok-11/PA-DasPro/assets/143393183/2d232600-1195-44e9-81ee-019dc2e482a8)
+
+Jika nama akun yang ingin di daftarkan maka akan muncul pesan nama akun sudah terdaftar. Silahkan anda menggunakan nama lain.
+
+### Minimal Karakter Untuk Nama Akun
+
+![image](https://github.com/PA-DasPro-Kelompok-11/PA-DasPro/assets/143393183/c9af7cff-04f6-4e9f-90b4-7a1c7db0a2f0)
+
+Minimal karakter untuk nama akun adalah 4 karakter dan maksimal 15 karakter.
+
+### Minimal Karakter Untuk Nama Password
+
+![image](https://github.com/PA-DasPro-Kelompok-11/PA-DasPro/assets/143393183/ba4fbd60-a868-4106-833d-3c9ac3bb902c)
+
+Minimal karakter untuk password adalah 4 karakter dan maksimal 15 karakter.
+
+### Saldo Minus
+
+![image](https://github.com/PA-DasPro-Kelompok-11/PA-DasPro/assets/143393183/543a27a7-75ce-42e0-bcfa-8f04d01a1692)
+
+Jika saldo yang diinput kurang dari sama dengan 0 maka muncul pesan saldo tidak boleh kurang sama dengan 0.
+
+### Keluar Program
+
+![image](https://github.com/PA-DasPro-Kelompok-11/PA-DasPro/assets/143393183/84321b86-dbff-4958-886c-708ea52716d5)
+
+Jika nomor 0 yang di input di menu awal, maka program akan berhenti dan memunculkan pesan di atas.
+
 ## Menu User
 
 ![image](https://github.com/PA-DasPro-Kelompok-11/PA-DasPro/assets/143393183/25c74f03-2cdb-4aa7-afb4-d6bb6aea9b0e)
