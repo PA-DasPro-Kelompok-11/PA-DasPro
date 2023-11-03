@@ -16,6 +16,26 @@ Terdapat 5 library yang kami gunakan di program ini yaitu:
 4. time disini kami gunakan untuk format penambahan jadwal, mengedit jadwal dan memunculkan tanggal pemesanan di bukti pembelian tiket,
 5. json untuk mengakses dan mengupdate json.
 
+## Fitur
+### User
+
+1. Pesan Tiket
+2. Tampilkan Saldo
+3. Isi Saldo
+4. Urutkan Film
+5. Cari Film
+
+### Admin
+
+1. Menambahkan Film
+2. Lihat Film
+3. Edit Nama Film
+4. Edit Jam Tayang
+5. Edit Harga Tiket
+6. Edit Jumlah Tiket
+7. Hapus Film
+
+
 # Penggunaan Program
 
 ## Menu Awal
